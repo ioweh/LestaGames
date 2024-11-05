@@ -18,8 +18,10 @@ def isEven(value):
 
 Сразу получилось написать вот такой код:
 
+```python
 def isEvenBwise(value):
     return value == ((value >> 1) << 1)
+```
 
 Плюсы могу объяснить цитатой из книжки Thinking Forth:
 
@@ -31,7 +33,9 @@ https://www.forth.com/starting-forth/7-signed-double-length-numbers/
 
 Могу третий пример добавить, с побитовым сложением:
 
+```python
 return not (value & 1)
+```
 
 единичка всегда будет выглядеть в двоичной записи как ...000001
 
