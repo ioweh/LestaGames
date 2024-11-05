@@ -7,9 +7,11 @@
 
 Пример: 
 
+```python
 def isEven(value):
 
       return value % 2 == 0
+```
 
 
 
@@ -52,6 +54,7 @@ return not (value & 1)
 
 Первая реализация:
 
+```python
 class queue:
     q = []
 
@@ -66,6 +69,7 @@ class queue:
 
     def print(self):
         print(self.q[::-1])
+```
 
 
 Использовал push и pop для помещения и извлечения элементов, добавил print для вывода на экран.
@@ -79,6 +83,7 @@ class queue:
 
 Вторая реализация:
 
+```python
 from collections import deque
 
 class queue:
@@ -95,6 +100,7 @@ class queue:
 
     def print(self):
         print(self.q[::-1])
+```
 
 Здесь, в силу того, что используем двусвязный список, удаление элемента не вызовет поэлементного сдвига всего списка, а следовательно выполнится за O(1).
 
@@ -107,6 +113,7 @@ class queue:
 
 Быстрая сортировка:
 
+```python
 def sort(array):
     # base case: arrays of length 0 or 1 are already sorted
     if len(array) <= 1:
@@ -122,6 +129,7 @@ def sort(array):
 
     # recursively sort and combine results
     return sort(smaller) + equal + sort(larger)
+```
 
 
 Почему способ неоптимален: упоминается что массив может быть отсортирован.
@@ -132,6 +140,7 @@ Moreover, the O(n^2) running time occurs when the input array is already complet
 
 Там же можно посмотреть, что у merge sort worst case равен O(n log n). Поэтому в данном случае, когда нас интересует скорость выполнения на любых данных, лучше взять merge sort.
 
+```python
 def merge_sort(array):
     # base case: arrays with 2 or less elements are already sorted
     if len(array) <= 1:
@@ -166,6 +175,7 @@ def merge(left, right):
     sorted_array.extend(right[j:])
 
     return sorted_array
+```
 
 test = [1,4,2,1,8,3]
 merge_sort(test)
