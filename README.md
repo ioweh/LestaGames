@@ -1,4 +1,4 @@
-# LestaGames
+# Lesta Games
 Тестовое задание
 
 Вопрос №1
